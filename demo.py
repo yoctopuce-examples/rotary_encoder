@@ -72,9 +72,9 @@ def do_rotate(count):
 
     if example == "log":
         if count > 0:
-            print("rotate clockwise of %d Detents", count)
+            print("clockwise rotation of %d Detents", count)
         else:
-            print("rotate anti clockwise of %d Detents", -count)
+            print("counterclockwise rotation of %d Detents", -count)
     elif example == "scroll":
         win32api.mouse_event(MOUSEEVENTF_WHEEL, 0, 0, -count * 15, 0)
     elif example == "alttab":
@@ -161,8 +161,8 @@ if YAPI.RegisterHub("usb", errmsg) != YAPI.SUCCESS:
 
 print('Hit Ctrl-C to Stop ')
 
-# example = 'log'
-example = 'alttab'
+example = 'log'
+#example = 'alttab'
 
 encoderA = YAnButton.FindAnButton("encoderA")
 encoderB = YAnButton.FindAnButton("encoderB")
